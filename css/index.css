@@ -364,7 +364,7 @@ button[type="submit"]:hover {
 }
 
 .contato-section .btn-primary:hover {
-    background-color: #e699aa; /* Rosa mais escuro */
+    background-color: #e699aa; 
     border-color: #e699aa;
 }
 

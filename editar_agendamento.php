@@ -1,5 +1,4 @@
 <?php
-// Puxando os dados do agendamento
 $conn = new mysqli("localhost", "root", "", "banco_psi");
 
 if ($conn->connect_error) {
@@ -17,11 +16,10 @@ if (isset($_GET['id'])) {
     
     if ($result->num_rows > 0) {
         $agendamento = $result->fetch_assoc();
-        // Verificação e formatação correta da data
         if (isset($agendamento['data']) && !empty($agendamento['data'])) {
             $data_formatada = date('Y-m-d', strtotime($agendamento['data']));
         } else {
-            $data_formatada = '';  // Deixe vazio ou defina um valor padrão
+            $data_formatada = ''; 
         }
     } else {
         echo "Agendamento não encontrado.";
